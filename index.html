@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chillax Time Showcase</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+        
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Chillax Time</a>
+                <nav>
+                    <ul>
+                        <li><a href="#projects">プロジェクト</a></li>
+                        <li><a href="#experiments">☕</a></li>
+                        <li><a href="#404">🌿</a></li>
+                        <li><a href="#secret">🍵</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="container">
+            <h1>AIと一緒に制作したWebプロジェクト</h1>
+            <p>Claudeと一緒に制作しました。明確にプロンプトを投げかけたというより、会話の中で作ってくれたWebアプリをまとめました。テーマはデジタルリラクゼーションです。</p>
+            <a href="#projects" class="cta-button">プロジェクトを見る</a>
+        </div>
+    </section>
+
+    <!-- プロジェクトギャラリー -->
+    <section class="gallery-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>プロジェクト</h2>
+                <p>AIが作ってくれたプロジェクト一覧です</p>
+            </div>
+            
+            <div class="gallery-filter">
+                <button class="filter-button active">すべて</button>
+                <button class="filter-button">Webアプリ</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- プロジェクト1 -->
+                <div class="project-card">
+                    <div class="card-image" style="background-image: url('img/mockup1.png');">
+                        <span class="card-tag">Webアプリ</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Breath Timer（ブレスタイマー）</h3>
+                        <p class="card-description">呼吸に合わせて画面上の円が拡大・縮小します。リラックスするトーン音と共に呼吸のリズムを整えて、心と体をリラックス</p>
+                        <a href="breath-control/index.html" class="card-link">
+                            アプリを試す
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- プロジェクト2 -->
+                <div class="project-card">
+                    <div class="card-image" style="background-image: url('img/mockup2.png');">
+                        <span class="card-tag">Webアプリ</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">TapSound（タップサウンド）</h3>
+                        <p class="card-description">タップで音を鳴らし、視覚エフェクトを楽しむシンプルな音楽アプリ</p>
+                        <a href="/music-app" class="card-link">
+                            アプリを試す
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- プロジェクト3 -->
+                <div class="project-card">
+                    <div class="card-image" style="background-image: url('img/mockup3.png');">
+                        <span class="card-tag">Webアプリ</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Harmonia Grid（ハーモニア・グリッド）</h3>
+                        <p class="card-description">ペンタトニックスケールを使用した音楽作成アプリ。グリッド上で簡単に心地よい音楽パターンを作成するアプリ</p>
+                        <a href="/calm-composer" class="card-link">
+                            アプリを試す
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <span>D</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span>E</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span>M</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span>O</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // フィルターボタンの機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // アクティブクラスを切り替え
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 実際のフィルタリング機能はここに追加
+                    // カテゴリーによるフィルタリングなど
+                });
+            });
+        });
+    </script>
+</body>
+</html>
